@@ -1,0 +1,314 @@
+:root {
+    --bg-color: #202124;
+    --text-color: #e8eaed;
+    --link-color: #5c8aca;
+    --link-hover-color: #425775;
+    --primary-color: #191a1f;
+    --secondary-color: #22242e;
+    --border-radius: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    position: relative;
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+header p {
+    margin: 15px 0 0;
+}
+.supply {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.gallery {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+.gallery img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.pagination, .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#search-box + button {
+    margin-right: 50px; 
+}
+button, .action-button, input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 0 10px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+button:hover, .action-button:hover, input[type="text"]:hover, input[type="number"]:hover {
+    background-color: var(--primary-color);
+}
+input[type="text"], input[type="number"] {
+    transition: width 0.3s ease;
+    width: 150px;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+    width: 200px;
+}
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+.modal-content {
+    margin: auto; 
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    max-width: 90%; 
+    max-height: 90vh; 
+    overflow-y: auto; 
+    box-sizing: border-box; 
+    position: relative;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.modal-content img {
+    max-width: 100%; 
+    max-height: 50vh; 
+    margin-bottom: 20px;
+}
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    text-align: center;
+    min-height: auto;
+}
+.caption button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+.disclaimer {
+    color: red; 
+    display: block;
+    margin-top: 20; 
+}
+.config-icon {
+    position: absolute;
+    top: 10px; 
+    right: 20px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 32px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.config-icon:hover {
+    transform: scale(1.2); 
+}
+
+#hash-display {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #232323;
+    border: 1px solid #232323;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    word-break: break-all;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+}
+
+.stat-title {
+    color: #ccc;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    color: var(--text-color);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.free-mint {
+    color: rgb(0, 204, 0);
+    font-size: 1.2em;
+}
+
+.mint-price {
+    color: #e8eaed;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.asset-id {
+    font-size: 1.1em;
+    color: #e8eaed;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.mint-info {
+    margin-left: 20px; 
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #e8eaed; 
+}
+
+.custom-link {
+    color: var(--link-color); 
+    text-decoration: none; 
+    font-weight: normal;
+}
+
+.custom-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+
+
+#modal-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vh; 
+    height: 40vh; 
+    margin: auto;
+    overflow: hidden; 
+}
+
+#modal-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+}
+
+
+@keyframes grow {
+    0%, 100% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.help-icon {
+    position: absolute;
+    top: 16px; 
+    right: 70px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: grow 2s ease-in-out infinite;
+}
+
+
+.help-icon:hover {
+    animation-play-state: paused;
+}
+
+.tos-modal-content {
+    margin: auto;
+    padding: 20px;
+    max-width: 60%; 
+    text-align: left; 
+}
+
+.highlighted {
+    background-color: #3a3a3a; 
+    border-left: 5px solid #ff0000; 
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold; 
+}
+
+#btc-address {
+    cursor: pointer;
+    color: var(--link-color); 
+    text-decoration: none; 
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#btc-address:hover, #btc-address:focus {
+    color: var(--link-hover-color);
+}
+
+
