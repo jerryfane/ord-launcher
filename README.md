@@ -6,6 +6,8 @@ The Ordinals Launcher is the first permissionless launcher for ordinals collecti
 
 You can monitor collections launched using the Ordinals Launcher using this [Dashboard](https://dune.com/j543/ordinals-launcher)
 
+You can use the following tools to index inscriptions from the Ordinals Launcher: [Ordinals Launcher Tracker](https://github.com/jerryfane/ord-launcher-tracker)
+
 ![Ordinals Launcher Screenshot](images/numbers.png)
 *Example of the Ordinals Launcher at: [2584410895e4532238f295d09a656a5596c021008857ad0b4bc04b3f2e02ac19i0](https://ordinals.com/content/2584410895e4532238f295d09a656a5596c021008857ad0b4bc04b3f2e02ac19i0)*
 
