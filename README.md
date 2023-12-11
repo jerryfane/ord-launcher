@@ -26,7 +26,9 @@ The Ordinals Launcher is a recursive inscription. Collection creators can compil
 ### Requirements
 
 - **IPFS Integration:** For proper display of non-inscribed assets on Ordinals Explorer, the launcher utilizes IPFS.
-- **Inscription Helper Extension:** The optimal functionality of the Ordinals Launcher requires the Inscription Helper browser extension. [Inscription Helper](https://github.com/jerryfane/inscription-helper). 
+- **Inscription Helper Extension:** The optimal functionality of the Ordinals Launcher requires the Inscription Helper browser extension. [Inscription Helper](https://chromewebstore.google.com/u/2/detail/inscription-helper/pkkadlgleljakhldkfolmhippjegighm)
+
+[Inscription Helper - Github](https://github.com/jerryfane/inscription-helper). 
 
 ## Terms of Service
 
